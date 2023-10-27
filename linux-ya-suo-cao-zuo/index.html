@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Linux 压缩操作 | Fadoherry</title>
+<meta name="description" content="welcome to fadoherry`s blog">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="https://fadoherry.github.io/favicon.ico?v=1698391200199">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://fadoherry.github.io/styles/main.css">
+
+
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+  </head>
+  <body>
+  
+    <nav class="navbar border fixed split-nav">
+  <div class="nav-brand">
+    <h3><a href="https://fadoherry.github.io">Fadoherry</a></h3>
+  </div>
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+      <label for="collapsible1">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
+        
+          <li>
+            
+              <a href="/" class="menu">
+                首页
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/archives" class="menu">
+                归档
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tags" class="menu">
+                标签
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/post/about" class="menu">
+                关于
+              </a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div id="top" class="row site">
+      <div class="sm-12 md-8 col">
+        <div class="paper">
+          <article class="article">
+            <h1>Linux 压缩操作</h1>
+            <p class="article-meta">
+              2023-10-27
+              
+                <a href="https://fadoherry.github.io/azLBTomms/" class="badge success">
+                  fadoherry
+                </a>
+              
+            </p>
+            
+            <div class="post-content" v-pre>
+              <p>Linux 服务器，可以使用各种命令来压缩文件夹。以下是常用的几种方法：</p>
+<p>使用 tar 命令压缩为 tar 格式：</p>
+<p>使用 tar 命令可以将文件夹压缩为 tar 格式的归档文件，然后可以选择将其压缩为 gzip 或 bzip2 压缩格式。</p>
+<h4 id="压缩为-tar-文件tar-cvf-archivetar-folder_to_compress">压缩为 .tar 文件：<code>tar -cvf archive.tar folder_to_compress</code></h4>
+<h4 id="压缩为-targz-文件tar-czvf-archivetargz-folder_to_compress">压缩为 .tar.gz 文件：<code>tar -czvf archive.tar.gz folder_to_compress</code></h4>
+<h4 id="压缩为-tarbz2-文件tar-cjvf-archivetarbz2-folder_to_compress">压缩为 .tar.bz2 文件：<code>tar -cjvf archive.tar.bz2 folder_to_compress</code></h4>
+<p>使用 zip 命令压缩为 zip 格式：</p>
+<p>使用 zip 命令可以将文件夹压缩为 zip 格式的压缩文件。</p>
+<h4 id="压缩为-zip-文件zip-r-archivezip-folder_to_compress">压缩为 .zip 文件：<code>zip -r archive.zip folder_to_compress</code></h4>
+<p>使用 7z 命令压缩为 7z 格式：</p>
+<p>如果安装了 p7zip 包，你可以使用 7z 命令将文件夹压缩为 7z 格式的压缩文件。</p>
+<h4 id="压缩为-7z-文件7z-a-archive7z-folder_to_compress">压缩为 .7z 文件：<code>7z a archive.7z folder_to_compress</code></h4>
+<p>这些命令中的参数含义如下：</p>
+<p>c：创建归档文件<br>
+x：解压缩归档文件<br>
+v：显示详细信息<br>
+z：以 gzip 格式压缩<br>
+j：以 bzip2 格式压缩<br>
+r：递归压缩整个文件夹</p>
+<p>例如，要将名为 my_folder 的文件夹压缩为 my_folder.tar.gz，可以执行以下命令：</p>
+<h4 id="tar-czvf-my_foldertargz-my_folder"><code>tar -czvf my_folder.tar.gz my_folder</code></h4>
+<p>请注意，压缩文件大小和压缩速度可能会因压缩算法和文件内容而有所不同。选择合适的压缩算法和格式取决于你的需求和服务器上已安装的工具。</p>
+<p>vim 文件<br>
+i进入编辑模式，编辑结束后按esc<br>
+：wq保存修改并退出</p>
+<h4 id="解压缩targz文件包tar-zxvf-my_foldertargz">解压缩tar.gz文件包：<code>tar -zxvf my_folder.tar.gz</code></h4>
+
+            </div>
+          </article>
+        </div>
+        <div class="paper" data-aos="fade-in">
+          
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://fadoherry.github.io/linux-xiang-guan-cao-zuo-ming-ling/">
+                <h3 class="post-title">
+                  Linux 相关操作命令
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+        
+      </div>
+
+      <div class="sm-12 md-4 col sidebar">
+  <div class="paper info-container">
+    <img src="https://fadoherry.github.io/images/avatar.png?v=1698391200199" class="no-responsive avatar">
+    <div class="text-muted">welcome to fadoherry`s blog</div>
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      最新文章
+    </div>
+    <div class="row">
+      <ul>
+        
+          
+            <li>
+              <a href="https://fadoherry.github.io/linux-ya-suo-cao-zuo/">Linux 压缩操作</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://fadoherry.github.io/linux-xiang-guan-cao-zuo-ming-ling/">Linux 相关操作命令</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://fadoherry.github.io/supervisor/">Supervisor</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://fadoherry.github.io/about/">关于</a>
+            </li>
+          
+        
+      </ul>
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      标签列表
+    </div>
+    <div class="row">
+      
+        <a href="https://fadoherry.github.io/azLBTomms/" class="badge success">
+          fadoherry
+        </a>
+      
+    </div>
+  </div>
+  <div class="paper">
+    Powered by <a href="https://github.com/fadoherry" target="_blank">Fadoherry</a> | <a class="rss" href="https://fadoherry.github.io/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+
+
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+</script>
+
+
+
+
+  </body>
+</html>

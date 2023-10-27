@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Linux 相关操作命令 | Fadoherry</title>
+<meta name="description" content="welcome to fadoherry`s blog">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="https://fadoherry.github.io/favicon.ico?v=1698391200199">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://fadoherry.github.io/styles/main.css">
+
+
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+  </head>
+  <body>
+  
+    <nav class="navbar border fixed split-nav">
+  <div class="nav-brand">
+    <h3><a href="https://fadoherry.github.io">Fadoherry</a></h3>
+  </div>
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+      <label for="collapsible1">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
+        
+          <li>
+            
+              <a href="/" class="menu">
+                首页
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/archives" class="menu">
+                归档
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tags" class="menu">
+                标签
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/post/about" class="menu">
+                关于
+              </a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div id="top" class="row site">
+      <div class="sm-12 md-8 col">
+        <div class="paper">
+          <article class="article">
+            <h1>Linux 相关操作命令</h1>
+            <p class="article-meta">
+              2023-10-27
+              
+                <a href="https://fadoherry.github.io/azLBTomms/" class="badge secondary">
+                  fadoherry
+                </a>
+              
+            </p>
+            
+            <div class="post-content" v-pre>
+              <h3 id="xshell常用命令大全">xshell常用命令大全</h3>
+<h4 id="1-ls命令列出文件">1、ls命令——列出文件</h4>
+<p><code>ls -la</code> 给出当前目录下所有文件的一个长列表，包括以句点开头的“隐藏”文件<br>
+<code>ls a*</code> 列出当前目录下以字母a开头的所有文件<br>
+<code>ls -l *.doc</code> 给出当前目录下以。doc结尾的所有文件</p>
+<h4 id="2-cp命令复制文件">2、cp命令——复制文件</h4>
+<p><code>cp afile afile.bak</code>把文件复制为新文件afile.bak<br>
+<code>cp afile /home/bible/</code> 把文件afile从当前目录复制到/home/bible/目录下<br>
+<code>cp * /tmp</code> 把当前目录下的所有未隐藏文件复制到/tmp/目录下<br>
+<code>cp -a docs docs.bak</code> 递归性地把当前目录下的docs目录复制为新目录docs.bak，保持文件属性，	并复制所有的文件，包括以句点开头的隐藏文件。为了方便起见，-a选项包含-R选项<br>
+<code>cp -i</code> 在覆盖前询问用户<br>
+<code>cp -v</code> 告诉用户正在做什么</p>
+<h4 id="3-mv命令移动和重命名文件">3、mv命令——移动和重命名文件</h4>
+<p><code>mv aflie bfile</code> 将afile重命名为bfile<br>
+<code>mv afile /tmp</code> 把当前目录下的afile移动到/tmp/目录下</p>
+<h4 id="4-rm命令删除文件和目录">4、rm命令——删除文件和目录</h4>
+<p><code>rm afile</code> 删除文件afile<br>
+<code>rm *</code> 删除当前目录下的所有文件（未隐藏文件）。rm命令不删除目录，除非也指定了-r（递归）参数。<br>
+<code>rm -rf domed</code> 删除domed目录以及它所包含的所有内容<br>
+<code>rm -i a*</code> 删除当前目录下所有以字母a开头的文件，并且在每次删除时，提示用户进行确认</p>
+<h4 id="5-cd命令更改目录">5、cd命令——更改目录</h4>
+<p><code>cd ~</code> 切换到主目录<br>
+<code>cd /tmp</code> 切换到目录/tmp<br>
+<code>cd dir</code> 切换到当前目录下的dir目录<br>
+<code>cd /</code> 切换到根目录<br>
+<code>cd</code> 或者<code>cd ..</code> 切换到到上一级目录<br>
+<code>cd /</code> 切换到上二级目录<br>
+<code>cd ~</code> 切换到用户目录，比如是root用户，则切换到/root下</p>
+<h4 id="6-mkdir命令建立目录">6、mkdir命令——建立目录</h4>
+<p><code>mkdir phots</code> 在当前目录中建立名为photos的目录<br>
+<code>mkdir -p this/that/theother</code> 在当前目录下建立指定的嵌套子目录</p>
+<h4 id="7-rmdir命令删除目录">7、rmdir命令——删除目录</h4>
+<p><code>rmdir</code> 将删除空目录</p>
+<h4 id="8-more-less命令查看文件内容">8、more、less命令——查看文件内容</h4>
+<p><code>more /etc/passwd</code> 查看/etc/passwd的内容<br>
+功能：分页显示命令<br>
+<code>more file</code><br>
+more命令也可以通过管道符（|）与其他的命令一起使用</p>
+<h4 id="9-grep命令搜索文件内容">9、grep命令——搜索文件内容</h4>
+<p><code>grep bible /etc/exports</code> 在文件exports中查找包含bible的所有行<br>
+<code>tail -100 /var/log/apache/access.log|grep 404</code> 在WEB服务器日志文件access.log的后100行中查找包含“404”的行<br>
+<code>tail -100 /var/log/apache/access.log|grep -v googlebot</code> 在WEB服务器日志文件access.log的后100行中，查找没有被google访问的行<br>
+grep -v ^# /etc/apache2/httpd.conf 在主apache配置文件中，查找所有非注释行</p>
+<h4 id="10-find命令查找文件">10、find命令——查找文件</h4>
+<p><code>find .-name *.rpm</code> 在当前目录中查找rpm包<br>
+<code>find .|grep page</code> 在当前目录及其子目录中查找文件名包含page的文件 locate traceroute 在系统的任何地方查找文件名包含traceroute的文件</p>
+<h4 id="11-vi命令编辑文件">11、vi命令——编辑文件</h4>
+<p><code>vi /etc/bubby.txt</code> 用vi编辑文件/etc/bubby.txt<br>
+<code>vim /etc/bubby.txt</code> 用vi编辑文件/etc/bubby.txt</p>
+
+            </div>
+          </article>
+        </div>
+        <div class="paper" data-aos="fade-in">
+          
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://fadoherry.github.io/supervisor/">
+                <h3 class="post-title">
+                  Supervisor
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+        
+      </div>
+
+      <div class="sm-12 md-4 col sidebar">
+  <div class="paper info-container">
+    <img src="https://fadoherry.github.io/images/avatar.png?v=1698391200199" class="no-responsive avatar">
+    <div class="text-muted">welcome to fadoherry`s blog</div>
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      最新文章
+    </div>
+    <div class="row">
+      <ul>
+        
+          
+            <li>
+              <a href="https://fadoherry.github.io/linux-ya-suo-cao-zuo/">Linux 压缩操作</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://fadoherry.github.io/linux-xiang-guan-cao-zuo-ming-ling/">Linux 相关操作命令</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://fadoherry.github.io/supervisor/">Supervisor</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://fadoherry.github.io/about/">关于</a>
+            </li>
+          
+        
+      </ul>
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      标签列表
+    </div>
+    <div class="row">
+      
+        <a href="https://fadoherry.github.io/azLBTomms/" class="badge warning">
+          fadoherry
+        </a>
+      
+    </div>
+  </div>
+  <div class="paper">
+    Powered by <a href="https://github.com/fadoherry" target="_blank">Fadoherry</a> | <a class="rss" href="https://fadoherry.github.io/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+
+
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+</script>
+
+
+
+
+  </body>
+</html>
